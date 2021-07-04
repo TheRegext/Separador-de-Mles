@@ -10,8 +10,16 @@ struct locate_miles : std::numpunct<char> {
 
 int main()
 {
+    double number;
     std::cout.imbue(std::locale(std::cout.getloc(), new locate_miles));
-    std::cout << std::fixed << std::setprecision(2) << 1985.67 << '\n'<< 30568526.22;
+
+    std::cout << "Number: ";
+
+    std::cin >> number;
+   
+    std::cout << std::endl  << "Output: " << std::fixed << std::setprecision(2) << number << std::endl;
+
+    std::cout << std::endl << std::endl << std::endl << std::endl;
 
     return 0;
 }
